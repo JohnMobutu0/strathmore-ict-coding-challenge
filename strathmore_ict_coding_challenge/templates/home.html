@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome | Strathmore ICT Coding Challenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #0055a5;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Strathmore ICT Coding Challenge</h1>
+        <p>Secure Credential Sharing Platform</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'add_credential' %}">Add Credential</a>
+        <a href="{% url 'view_credentials' %}">View Credentials</a>
+        <a href="{% url 'login' %}">Login</a>
+    </nav>
+
+    <main>
+        <h2>Welcome, Innovator!</h2>
+        <p>This platform allows you to securely share and manage credentials.</p>
+        <a href="{% url 'add_credential' %}" class="btn">Get Started</a>
+    </main>
+</body>
+</html>
